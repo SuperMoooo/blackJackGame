@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #3b3c41;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: #2c2d31;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.money {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.money > * {
+    margin: 0px 5px;
+}
+
+.money > button {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 5px;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: 0.2s ease;
+}
+
+.money > button:hover {
+    font-size: 22px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 820px;
+    background-color: #2c2d31;
+}
+
+.topSectionBig,
+.botSectionBig {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.topSection,
+.botSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.value {
+    font-size: 25px;
+    color: white;
+}
+
+.dealerHand {
+    margin: 5px 10px;
+    justify-self: center;
+    padding: 120px 70px;
+    background-color: rgb(166, 121, 121);
+    border: 2px solid white;
+    border-radius: 10px;
+    transform: translateY(35px);
+    animation: dealerCardShow 0.5s forwards;
+    z-index: 0;
+    font-size: 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.playerHand {
+    margin: 5px 10px;
+    justify-self: center;
+    padding: 120px 70px;
+    background-color: rgb(166, 121, 121);
+    border-radius: 10px;
+    border: 2px solid white;
+    transform: translateY(350px);
+    overflow: hidden;
+    transition: 0.4s ease;
+    animation: playerCardShow 0.5s forwards;
+    z-index: 0;
+    font-size: 25px;
+    color: white;
+}
+
+@keyframes playerCardShow {
+    from {
+        transform: translateY(350px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes dealerCardShow {
+    from {
+        transform: translateY(-350px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 1280px) {
+    .dealerHand {
+        padding: 80px 40px;
+        font-size: 20px;
+    }
+
+    .playerHand {
+        padding: 80px 40px;
+        font-size: 20px;
+    }
+}
+
+.btnSpace {
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+}
+
+.amounts {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 10px;
+}
+
+.amounts > *,
+.btnSpace > * {
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.amounts > *:hover,
+.btnSpace > *:hover {
+    font-size: 20px;
+    background-color: rgb(200, 200, 200);
+}
+
+.valueToGo {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    font-size: 25px;
+}
+
+.valueToGo > * {
+    margin: 0px 10px;
+}
+
+.valueToGo > button {
+    font-size: 22px;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.valueToGo > button:hover {
+    font-size: 24px;
+    background-color: rgb(200, 200, 200);
+}
